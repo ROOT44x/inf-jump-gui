@@ -1,0 +1,76 @@
+-- Inf Jump 
+-- Version: 2.0
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local togle = Instance.new("TextLabel")
+local infjump = Instance.new("TextButton")
+local made = Instance.new("TextLabel")
+local exit = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+main.Position = UDim2.new(0.260869563, 0, 0.198051944, 0)
+main.Size = UDim2.new(0, 238, 0, 153)
+main.Visible = true
+main.Active = true
+main.Draggable = true
+
+togle.Name = "togle"
+togle.Parent = main
+togle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+togle.Position = UDim2.new(0.075630255, 0, 0, 0)
+togle.Size = UDim2.new(0, 174, 0, 44)
+togle.Font = Enum.Font.SourceSans
+togle.Text = "Inf Jump Press F TO TOGGLE on/off!\\n"
+togle.TextColor3 = Color3.fromRGB(0, 255, 0)
+togle.TextSize = 22.000
+togle.TextWrapped = true
+
+infjump.Name = "infjump"
+infjump.Parent = main
+infjump.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+infjump.Position = UDim2.new(0.0793650672, 0, 0.35806933, 0)
+infjump.Size = UDim2.new(0, 205, 0, 43)
+infjump.Font = Enum.Font.SourceSans
+infjump.Text = "Run Script"
+infjump.TextColor3 = Color3.fromRGB(0, 0, 0)
+infjump.TextScaled = true
+infjump.TextSize = 15.000
+infjump.TextWrapped = true
+infjump.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/ROOT44x/inf-jump-toggle/main/inf%20jump%20new.txt'),true))()	
+end)
+
+made.Name = "made"
+made.Parent = main
+made.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+made.Position = UDim2.new(0.439153433, 0, 0.866130352, 0)
+made.Size = UDim2.new(0, 133, 0, 20)
+made.Font = Enum.Font.SourceSans
+made.Text = "By ROOT44"
+made.TextColor3 = Color3.fromRGB(0, 255, 0)
+made.TextScaled = true
+made.TextSize = 18.000
+made.TextWrapped = true
+
+exit.Name = "exit"
+exit.Parent = main
+exit.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+exit.Position = UDim2.new(0.855119824, 0, -0.00179316103, 0)
+exit.Size = UDim2.new(0, 34, 0, 30)
+exit.Font = Enum.Font.SourceSans
+exit.Text = "X"
+exit.TextColor3 = Color3.fromRGB(255, 0, 0)
+exit.TextSize = 18.000
+exit.MouseButton1Down:connect(function()
+main.Visible = false	
+end)
